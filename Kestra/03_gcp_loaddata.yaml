@@ -1,0 +1,61 @@
+id: gcp_loaddata
+namespace: projectzoomcamp
+
+tasks:
+  - id: extract
+    type: io.kestra.plugin.scripts.shell.Commands
+    outputFiles:
+      - "data/*.csv"
+    taskRunner:
+      type: io.kestra.plugin.core.runner.Process
+    commands:
+      - pip install kaggle
+      - mkdir -p ~/.kaggle
+      - echo '{{ kv("KAGGLE_JSON") }}' > ~/.kaggle/kaggle.json  # Store Kaggle JSON in kv store
+      - chmod 600 ~/.kaggle/kaggle.json
+      - kaggle datasets download -d alexlau203/sydney-house-prices -p ./data --unzip
+
+  - id: upload_to_gcs
+    type: io.kestra.plugin.gcp.gcs.Upload
+    from: "{{ outputs.extract.outputFiles['data/domain_properties.csv'] }}"
+    to: "gs://{{ kv('GCP_BUCKET_NAME') }}/domain_properties.csv"
+
+  - id: bq_load_external_table
+    type: io.kestra.plugin.gcp.bigquery.Query
+    sql: |
+      CREATE OR REPLACE EXTERNAL TABLE `{{ kv('GCP_PROJECT_ID') }}.projectdataset.domain_properties`
+      (
+        price INT64,
+        date_sold STRING,
+        suburb STRING,
+        num_bath INT64,
+        num_bed INT64,
+        num_parking INT64,
+        property_size INT64,
+        type STRING,
+        suburb_population INT64,
+        suburb_median_income INT64,
+        suburb_sqkm FLOAT64,
+        suburb_lat FLOAT64,
+        suburb_lng FLOAT64,
+        suburb_elevation INT64,
+        cash_rate FLOAT64,
+        property_inflation_index FLOAT64,
+        km_from_cbd FLOAT64
+      )
+      OPTIONS (
+          format = 'CSV',
+          uris = ['gs://{{ kv('GCP_BUCKET_NAME') }}/domain_properties.csv'],
+          skip_leading_rows = 1,
+          field_delimiter = ',',
+          allow_jagged_rows = TRUE,
+          ignore_unknown_values = TRUE
+      );
+
+pluginDefaults:
+  - type: io.kestra.plugin.gcp
+    values:
+      serviceAccount: "{{ kv('GCP_KEY') }}"
+      projectId: "{{ kv('GCP_PROJECT_ID') }}"
+      location: "{{ kv('GCP_LOCATION') }}"
+      bucket: "{{ kv('GCP_BUCKET_NAME') }}"
