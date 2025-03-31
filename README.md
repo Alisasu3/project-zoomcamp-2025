@@ -66,7 +66,7 @@ More details/notes of how I built Batch pipeline can be found in this file [Inst
 ## Step 4: Dashboard
 My dashboard can be accessed here [Dashboard](https://lookerstudio.google.com/s/tvuljM4rBm8)<br>
 Here is a screenshot of my dashboard
-![dashboard](image-5.png)
+![dashboard](dashboard.png)
 
 
 
