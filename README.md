@@ -25,7 +25,7 @@ I use below dataset for this project from Kaggle:<br>
 * Generate Json key 
 * Save as mycreds.json under keys folder
 * Create main.tf [(See Script)](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Terraform/main.tf) 
-* Create gitignore file ( Ignore Json key ) 
+* Create gitignore file (Ignore Json key) 
 * Run:
     1. export GOOGLE_CREDENTIALS='/home/su/project-zoomcamp-2025/keys/mycreds.json'<br>echo $GOOGLE_CREDENTIALS  
     2. terrraform fmt - terraform init - terraform plan - terraform apply
@@ -62,10 +62,11 @@ I use below dataset for this project from Kaggle:<br>
     7. Upload more data to BigQuery<br>
     Upload detailed data to BigQuery table - Upload python script to Dataproc job [(See 08_sql_spark_bq_domian.py)](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Batch/code/08_sql_spark_bq_domain.py) - Connect Dataproc to BigQuery - Submit job<br>
 
-More details/notes of how I built Batch pipeline can be found in this file [Instruction_batch.md](https://lookerstudio.google.com/s/tvuljM4rBm8)
+More details/notes of how I built Batch pipeline can be found in this file [Instruction_batch.md](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Batch/code/Instruction_batch.md)
 ## Step 3: Dashboard
 My dashboard can be accessed here [Dashboard](https://lookerstudio.google.com/s/tvuljM4rBm8)<br>
 Here is a screenshot of my dashboard
 ![dashboard](image-5.png)
+
 
 
