@@ -57,8 +57,8 @@ Test Spark:
 ## Use Pyspark in Jupyter notebook for data transformation and ingestion
 
     DAG Visualization
-    ![Spark UI](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Batch/code/image-4.png)
-    ![Spark UI](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Batch/code/image-3.png)
+    ![Spark UI](image-4.png)
+    ![Spark UI](image-3.png)
 
 ## Download google cloud connector:
 
@@ -74,7 +74,7 @@ Test Spark:
     forward 8081
     copy master url
     ./sbin/start-worker.sh spark://de-zoomcamp.australia-southeast1-b.c.western-triode-447803-t3.internal:7077
-    ![Spark Master UI](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Batch/code/image-1.png)
+    ![Spark Master UI](image-1.png)
     Should see Worker Id and Application ID in Spark Master
 
 ## Convert to python script and execute
@@ -94,7 +94,7 @@ Test Spark:
 
 ## Create a Dataproc Cluster in google cloud
 
-    ![Cluster Creation](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Batch/code/image-2.png)
+    ![Cluster Creation](image-2.png)
 
 ## Upload data to bucket
 

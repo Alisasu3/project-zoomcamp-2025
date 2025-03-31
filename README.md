@@ -63,7 +63,7 @@ I use below dataset for this project from Kaggle:<br>
     Upload detailed data to BigQuery table - Upload python script to Dataproc job [(See 08_sql_spark_bq_domian.py)](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Batch/code/08_sql_spark_bq_domain.py) - Connect Dataproc to BigQuery - Submit job<br>
 
 More details/notes of how I built Batch pipeline can be found in this file [Instruction_batch.md](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Batch/code/Instruction_batch.md)
-## Step 3: Dashboard
+## Step 4: Dashboard
 My dashboard can be accessed here [Dashboard](https://lookerstudio.google.com/s/tvuljM4rBm8)<br>
 Here is a screenshot of my dashboard
 ![dashboard](image-5.png)
