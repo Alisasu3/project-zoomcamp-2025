@@ -20,7 +20,7 @@ I use below dataset for this project from Kaggle:<br>
 * Looker studio
 
 ## 🧱 Architecture:
-![Architecture](images/architecture.png)
+![Architecture](architecture.png)
 
 ## 🌍 Step 1：Use Terraform to Create Infrastructure
 ### Setting up a service account on GCP
