@@ -4,7 +4,7 @@ My final project submission for 2025 Zoomcamp!
 The goal of this project is to conduct an in-depth analysis of historical housing prices across New South Wales (NSW). Given the city's dynamic real estate market, this topic is highly relevant to residents, owners, investors, and policymakers. By leveraging this dataset, I aim to track housing price trends across different suburbs over time, identifying areas with significant growth potential. The interactive dashboard offers valuable insights into market fluctuations, helping users make informed investment decisions and assess potential opportunities in the evolving property landscape.
 
 I use below dataset for this project from Kaggle:<br>
-    https://www.kaggle.com/datasets/alexlau203/sydney-house-prices/data?select=domain_properties.csv
+    https://www.kaggle.com/datasets/alexlau203/sydney-house-prices/data?select=domain_properties.csv<br>
 Note: This project is designed to demonstrate the construction of an end-to-end data pipeline. Due to limitations in the dataset, the focus is not on deriving insights through dashboards.
 
 ## 🔧 Technologies
