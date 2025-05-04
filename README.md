@@ -23,9 +23,9 @@ I use below dataset for this project from Kaggle:<br>
 ![Architecture](architecture.png)
 
 ## 🌍 Step 1：Use Terraform to Create Infrastructure
-### Setting up a service account on GCP
+### Setting up a Service Account on GCP
 * Go to Google cloud - IAM&Admin - Create Service Account - Service Account Name: project2025 - Grant Roles for Service Account (Storage Admin, Bigquery Admin)
-### Setting up Credentials and Create bucket in GCP
+### Setting up Credentials and Create Bucket in GCP
 * Generate Json key 
 * Save as mycreds.json under keys folder
 * Create main.tf [(See Script)](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Terraform/main.tf) 
@@ -72,7 +72,7 @@ My dashboard can be accessed here [Dashboard](https://lookerstudio.google.com/s/
 Here is a screenshot of my dashboard
 ![dashboard](dashboard.png)
 
-## 📩 Feel free to contribute or raise issues
+## 📩 Feel Free To Contribute or Raise Issues
 
 
 
