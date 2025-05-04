@@ -1,12 +1,12 @@
-# Domain Properties Price Analysis 2016-2022
+# 🚀 Domain Properties Price Analysis 2016-2022
 My final project submission for 2025 Zoomcamp!
-## Problem Description
+## 📝 Problem Description
 The goal of this project is to conduct an in-depth analysis of historical housing prices across New South Wales (NSW). Given the city's dynamic real estate market, this topic is highly relevant to residents, owners, investors, and policymakers. By leveraging this dataset, I aim to track housing price trends across different suburbs over time, identifying areas with significant growth potential. The interactive dashboard offers valuable insights into market fluctuations, helping users make informed investment decisions and assess potential opportunities in the evolving property landscape.
 
 I use below dataset for this project from Kaggle:<br>
     https://www.kaggle.com/datasets/alexlau203/sydney-house-prices/data?select=domain_properties.csv
 
-## Technologies
+## 🔧 Technologies
 
 * Google Cloud Platform (GCP)
 * VM instance
@@ -19,7 +19,7 @@ I use below dataset for this project from Kaggle:<br>
 * Batch pipeline: Spark
 * Looker studio
 
-## Step 1：Use Terraform to Create Infrastructure
+## 🌍 Step 1：Use Terraform to Create Infrastructure
 ### Setting up a service account on GCP
 * Go to Google cloud - IAM&Admin - Create Service Account - Service Account Name: project2025 - Grant Roles for Service Account (Storage Admin, Bigquery Admin)
 ### Setting up Credentials and Create bucket in GCP
@@ -31,7 +31,7 @@ I use below dataset for this project from Kaggle:<br>
     1. export GOOGLE_CREDENTIALS='/home/su/project-zoomcamp-2025/keys/mycreds.json'<br>echo $GOOGLE_CREDENTIALS  
     2. terrraform fmt - terraform init - terraform plan - terraform apply
 
-## Step 2: Use Kestra to Load Data to Google Cloud Platform (GCP) 
+## ☁️ Step 2: Use Kestra to Load Data to Google Cloud Platform (GCP) 
 * Using: 
     1. Google Cloud Storage (GCS) as a data lake 
     2. BigQuery as a data warehouse
@@ -43,7 +43,7 @@ I use below dataset for this project from Kaggle:<br>
 * Dowmload csv from Kaggle, create table and load to GCP [(03_gcp_loaddata.yaml)](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Kestra/03_gcp_loaddata.yaml) 
 * Use Kestra to automate workflow 
 
-## Step 3: Batch Processing
+## 🔄 Step 3: Batch Processing
 * Install JAVA and Spark 
 * Download and unzip file (Using download_sydney_data.sh)
 * Data Ingestion/Workflow Orchestration 
@@ -64,7 +64,7 @@ I use below dataset for this project from Kaggle:<br>
     Upload detailed data to BigQuery table - Upload python script to Dataproc job [(See 08_sql_spark_bq_domian.py)](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Batch/code/08_sql_spark_bq_domain.py) - Connect Dataproc to BigQuery - Submit job<br>
 
 More details/notes of how I built Batch pipeline can be found in this file [Instruction_batch.md](https://github.com/Alisasu3/project-zoomcamp-2025/blob/main/Batch/code/Instruction_batch.md)
-## Step 4: Dashboard
+## 📈 Step 4: Visualization
 My dashboard can be accessed here [Dashboard](https://lookerstudio.google.com/s/tvuljM4rBm8)<br>
 Here is a screenshot of my dashboard
 ![dashboard](dashboard.png)
