@@ -19,6 +19,8 @@ I use below dataset for this project from Kaggle:<br>
 * Batch pipeline: Spark
 * Looker studio
 
+## 🧱 Architecture:
+
 ## 🌍 Step 1：Use Terraform to Create Infrastructure
 ### Setting up a service account on GCP
 * Go to Google cloud - IAM&Admin - Create Service Account - Service Account Name: project2025 - Grant Roles for Service Account (Storage Admin, Bigquery Admin)
