@@ -72,5 +72,7 @@ My dashboard can be accessed here [Dashboard](https://lookerstudio.google.com/s/
 Here is a screenshot of my dashboard
 ![dashboard](dashboard.png)
 
+## 📩 Feel free to contribute or raise issues
+
 
 
